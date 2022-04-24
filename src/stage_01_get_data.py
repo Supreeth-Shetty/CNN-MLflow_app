@@ -1,13 +1,13 @@
 import argparse
 import os
 import shutil
-from tqdm import tqdm
+# from tqdm import tqdm
 import logging
 from src.utils.common import read_yaml, create_directories
 import random
+import urllib.request as req
 
-
-STAGE = "STAGE_NAME" ## <<< change stage name 
+STAGE = "GET_DATA" ## <<< change stage name 
 
 logging.basicConfig(
     filename=os.path.join("logs", 'running_logs.log'), 
@@ -20,6 +20,7 @@ logging.basicConfig(
 def main(config_path, params_path):
     ## read config files
     config = read_yaml(config_path)
+    print(config)
     params = read_yaml(params_path)
     pass
 
