@@ -2,3 +2,4 @@ env/
 data/
 *.zip
 running_logs.log
+logs/running_logs.log
