@@ -4,6 +4,7 @@ import shutil
 from tqdm import tqdm
 import logging
 from src.utils.common import read_yaml, create_directories, unzip_file
+from src.utils.data_validating import validating_img
 import random
 import urllib.request as req
 
@@ -41,6 +42,10 @@ def main(config_path, params_path):
         unzip_file(data_file_path, unzip_data_loc)
     else:
         logging.info("Data already extracted!!")
+
+    # validating image
+    validating_img(config=config)
+    
 
 if __name__ == '__main__':
     args = argparse.ArgumentParser()
