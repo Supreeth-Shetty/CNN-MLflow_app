@@ -27,9 +27,12 @@ def validating_img(config:dict) -> None:
                 if len(img.getbands()) !=3 or imghdr.what(path_to_img) not in ['jpeg','png']:
                     bad_data_path = os.path.join(BAD_DATA_DIR, imgs)
                     shutil.move(path_to_img, bad_data_path)
+                    logging.info(f"{path_to_img} in not in expected format")
                     continue        
-                print(f"{path_to_img} is verified with format {imghdr.what(path_to_img)}")
+                # print(f"{path_to_img} is verified with format {imghdr.what(path_to_img)}")
             except Exception as e:
-                print(f"{path_to_img} is bad and moving into {BAD_DATA_DIR}!")
+                logging.info(f"{path_to_img} is bad and moving into {BAD_DATA_DIR}!")
+                logging.exception(e)
                 bad_data_path = os.path.join(BAD_DATA_DIR, imgs)
                 shutil.move(path_to_img, bad_data_path)
+                
