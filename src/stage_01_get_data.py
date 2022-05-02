@@ -3,7 +3,7 @@ import os
 import shutil
 from tqdm import tqdm
 import logging
-from src.utils.common import read_yaml, create_directories
+from src.utils.common import read_yaml, create_directories, unzip_file
 import random
 import urllib.request as req
 
@@ -35,6 +35,12 @@ def main(config_path, params_path):
     else:
         logging.info("Data already available")
 
+    #unzip op
+    if "PetImages"  not in os.listdir('data'):
+        unzip_data_loc = config["data"]["unzip_data_loc"]
+        unzip_file(data_file_path, unzip_data_loc)
+    else:
+        logging.info("Data already extracted!!")
 
 if __name__ == '__main__':
     args = argparse.ArgumentParser()

@@ -3,3 +3,7 @@ data/
 *.zip
 running_logs.log
 logs/running_logs.log
+data/PetImages
+data/PetImages/*.jpg
+
+logs/running_logs.log

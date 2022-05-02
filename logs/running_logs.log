@@ -1,31 +1,28 @@
-[2022-05-02 11:49:50,505: INFO: stage_01_get_data]: 
+[2022-05-02 12:39:08,523: INFO: stage_01_get_data]: 
 ********************
-[2022-05-02 11:49:50,505: INFO: stage_01_get_data]: >>>>> stage GET DATA started <<<<<
-[2022-05-02 11:49:50,505: INFO: common]: yaml file: configs/config.yaml loaded successfully
-[2022-05-02 11:49:50,505: INFO: common]: created directory at: data
-[2022-05-02 11:49:50,505: INFO: stage_01_get_data]: created local directory data
-[2022-05-02 11:49:50,505: INFO: stage_01_get_data]: Downloading data started
-[2022-05-02 11:50:56,677: INFO: stage_01_get_data]: file name : 
-data\data.zip created witjh info 
-Content-Type: application/octet-stream
-Accept-Ranges: bytes
-Server: Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0
-x-ms-blob-content-md5: l2WJyK3tt5/f2azyQ9eE8w==
-Last-Modified: Sat, 13 Oct 2018 12:14:22 GMT
-ETag: "0x8D6310568FD1DF6"
-Content-Length: 824894548
-Date: Mon, 02 May 2022 06:19:51 GMT
-Connection: close
+[2022-05-02 12:39:08,523: INFO: stage_01_get_data]: >>>>> stage GET DATA started <<<<<
+[2022-05-02 12:39:08,524: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-05-02 12:39:08,524: INFO: stage_01_get_data]: Data already available
+[2022-05-02 12:40:01,103: INFO: common]: extracted data\data.zip to data
+[2022-05-02 12:40:01,128: INFO: stage_01_get_data]: >>>>> stage GET DATA completed!<<<<<
 
-
-[2022-05-02 11:50:56,677: INFO: stage_01_get_data]: >>>>> stage GET DATA completed!<<<<<
-
-[2022-05-02 11:58:03,219: INFO: stage_01_get_data]: 
+[2022-05-02 12:44:53,624: INFO: stage_01_get_data]: 
 ********************
-[2022-05-02 11:58:03,219: INFO: stage_01_get_data]: >>>>> stage GET DATA started <<<<<
-[2022-05-02 11:58:03,220: INFO: common]: yaml file: configs/config.yaml loaded successfully
-[2022-05-02 11:58:03,220: INFO: common]: created directory at: data
-[2022-05-02 11:58:03,220: INFO: stage_01_get_data]: created local directory data
-[2022-05-02 11:58:03,221: INFO: stage_01_get_data]: Data already available
-[2022-05-02 11:58:03,221: INFO: stage_01_get_data]: >>>>> stage GET DATA completed!<<<<<
+[2022-05-02 12:44:53,624: INFO: stage_01_get_data]: >>>>> stage GET DATA started <<<<<
+[2022-05-02 12:44:53,625: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-05-02 12:44:53,625: INFO: stage_01_get_data]: Data already available
+[2022-05-02 12:44:53,626: ERROR: stage_01_get_data]: [WinError 3] The system cannot find the path specified: '/data'
+Traceback (most recent call last):
+  File "src/stage_01_get_data.py", line 54, in <module>
+    main(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_01_get_data.py", line 39, in main
+    if "PetImages"  not in os.listdir('/data'):
+FileNotFoundError: [WinError 3] The system cannot find the path specified: '/data'
+[2022-05-02 12:45:10,639: INFO: stage_01_get_data]: 
+********************
+[2022-05-02 12:45:10,640: INFO: stage_01_get_data]: >>>>> stage GET DATA started <<<<<
+[2022-05-02 12:45:10,641: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-05-02 12:45:10,641: INFO: stage_01_get_data]: Data already available
+[2022-05-02 12:45:10,641: INFO: stage_01_get_data]: Data already extracted!!
+[2022-05-02 12:45:10,641: INFO: stage_01_get_data]: >>>>> stage GET DATA completed!<<<<<
 
