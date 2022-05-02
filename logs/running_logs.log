@@ -20,3 +20,12 @@ Connection: close
 
 [2022-05-02 11:50:56,677: INFO: stage_01_get_data]: >>>>> stage GET DATA completed!<<<<<
 
+[2022-05-02 11:58:03,219: INFO: stage_01_get_data]: 
+********************
+[2022-05-02 11:58:03,219: INFO: stage_01_get_data]: >>>>> stage GET DATA started <<<<<
+[2022-05-02 11:58:03,220: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-05-02 11:58:03,220: INFO: common]: created directory at: data
+[2022-05-02 11:58:03,220: INFO: stage_01_get_data]: created local directory data
+[2022-05-02 11:58:03,221: INFO: stage_01_get_data]: Data already available
+[2022-05-02 11:58:03,221: INFO: stage_01_get_data]: >>>>> stage GET DATA completed!<<<<<
+
