@@ -23,13 +23,12 @@ def main(config_path, params_path):
     config = read_yaml(config_path)
     URL = config["data"]["source_url"]
     local_dir = config["data"]["local_dir"]
-    create_directories([local_dir])
-    logging.info(f"created local directory {local_dir}")
-
     data_file = config["data"]["data_file"]
     data_file_path = os.path.join(local_dir, data_file)
 
     if not os.path.isfile(data_file_path):
+        create_directories([local_dir])
+        logging.info(f"created local directory {local_dir}")
         logging.info("Downloading data started")
         filename, headers = req.urlretrieve(URL, data_file_path)
         logging.info(f"file name : \n{filename} created witjh info \n{headers}")
