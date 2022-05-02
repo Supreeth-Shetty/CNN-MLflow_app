@@ -1,0 +1,7 @@
+[2022-04-21 10:41:31,319: INFO: stage_00_template]: 
+********************
+[2022-04-21 10:41:31,320: INFO: stage_00_template]: >>>>> stage STAGE_NAME started <<<<<
+[2022-04-21 10:41:31,322: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-04-21 10:41:31,323: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-04-21 10:41:31,323: INFO: stage_00_template]: >>>>> stage STAGE_NAME completed!<<<<<
+
