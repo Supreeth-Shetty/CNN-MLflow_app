@@ -63,5 +63,6 @@ dependencies:
     - werkzeug==2.1.1
     - zipp==3.8.0
     - Pillow==9.1.0
+    - tensorflow==2.8.0
 prefix: C:\Users\supreesh\Desktop\supreeth data\Data_Science@Ineuron\deeplearning
   projects\CNN-MLflow_app\env
