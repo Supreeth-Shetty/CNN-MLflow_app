@@ -9,7 +9,7 @@ import random
 import urllib.request as req
 
 
-STAGE = "GET DATA" ## <<< change stage name 
+STAGE = "Get Data Stage" ## <<< change stage name 
 
 logging.basicConfig(
     filename=os.path.join("logs", 'running_logs.log'), 

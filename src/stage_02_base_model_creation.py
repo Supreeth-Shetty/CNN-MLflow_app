@@ -5,7 +5,7 @@ from tqdm import tqdm
 import logging
 from src.utils.common import read_yaml, create_directories
 import random
-import tensorflow
+import tensorflow as tf
 
 STAGE = "Base Model Creation Stage" ## <<< change stage name 
 
@@ -34,7 +34,8 @@ def main(config_path, params_path):
 
     classifier = tf.keras.Sequential(LAYERS)
 
-    classifier.summary()
+    classifier.summary(print_fn=logging.info)
+    
 
     classifier.compile(
     optimizer=tf.keras.optimizers.Adam(0.001),
