@@ -43,6 +43,12 @@ def main(config_path, params_path):
     metrics=["accuracy"]
     )
 
+    path_to_model_dir = config['model']['model_dir']
+    create_directories([path_to_model_dir])
+    path_to_model = os.path.join(path_to_model_dir, 'init_model.h5')
+    classifier.save(path_to_model)
+    logging.info(f"model is saved at {path_to_model}")
+
 if __name__ == '__main__':
     args = argparse.ArgumentParser()
     args.add_argument("--config", "-c", default="configs/config.yaml")

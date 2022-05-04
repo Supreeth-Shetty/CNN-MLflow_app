@@ -11,3 +11,6 @@ params :
   optimizer_lr : 0.001
   loss_fn : sparse_categorical_crossentropy
   metrics : ["accuracy"]
+
+model :
+  model_dir: Artifacts

@@ -7,3 +7,4 @@ data/PetImages
 data/PetImages/*.jpg
 
 logs/running_logs.log
+Artifacts/init_model.h5
