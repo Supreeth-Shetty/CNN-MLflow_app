@@ -35,6 +35,7 @@ conda env export > conda.yaml
 
 ### STEP 07 - To run the project -
 ```bash
+init_setup.sh #for initial env and requirement setup
 mlflow run . --no-conda #for not creating conda env and running in same env
 mlflow run . #for creating conda env
 ```
