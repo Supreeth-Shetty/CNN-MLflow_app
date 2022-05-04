@@ -40,16 +40,17 @@ def main(config_path, params_path):
     if "PetImages"  not in os.listdir('data'):
         unzip_data_loc = config["data"]["unzip_data_loc"]
         unzip_file(data_file_path, unzip_data_loc)
+        # validating image
+        validating_img(config=config)
     else:
-        logging.info("Data already extracted!!")
+        logging.info("Data already extracted and verifed!!")
 
-    # validating image
-    validating_img(config=config)
+    
     
 
 if __name__ == '__main__':
     args = argparse.ArgumentParser()
-    args.add_argument("--config", "-c", default="configs/config.yaml")
+    args.add_argument("--config", "-c", default= "configs/config.yaml")
     args.add_argument("--params", "-p", default="params.yaml")
     parsed_args = args.parse_args()
 
