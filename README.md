@@ -32,3 +32,13 @@ conda env export > conda.yaml
 ```
 
 ### STEP 06- commit and push the changes to the remote repository
+
+### STEP 07 - To run the project -
+```bash
+mlflow run . --no-conda #for not creating conda env and running in same env
+mlflow run . #for creating conda env
+```
+
+### STEP 07 - To run the project by passing custom stages and config file-
+```bash
+mlflow run . -e stage_name -P cofigs=customs config file path --no-conda
