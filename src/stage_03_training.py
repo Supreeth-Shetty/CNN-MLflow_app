@@ -44,18 +44,18 @@ def main(config_path):
     path_to_model_dir = config['model']['model_dir']
     path_to_model = os.path.join(path_to_model_dir, 'init_model.h5')
     classifier = tf.keras.models.load_model(path_to_model)
-    logging.info(f"model loded which was saved at {path_to_model}")
+    logging.info(f"initial model loded which was saved at {path_to_model}")
 
     #start training
     EPOCHS = params['EPOCHS']
-    classifier.fit(train_ds, epochs=EPOCHS, validation_data = val_ds)
     logging.info("Training Started!!")
+    classifier.fit(train_ds, epochs=EPOCHS, validation_data = val_ds)
     
     #save model
     path_to_model_dir = config['model']['model_dir']
     path_to_trained_model = os.path.join(path_to_model_dir, config['model']['trained_model'])
     classifier.save(path_to_trained_model)
-    logging.info("Training completed, model saved at {path_to_trained_model}!!")
+    logging.info(f"Training completed, model saved at {path_to_trained_model}!!")
 
 if __name__ == '__main__':
     args = argparse.ArgumentParser()
