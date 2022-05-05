@@ -11,6 +11,14 @@ params :
   optimizer_lr : 0.001
   loss_fn : sparse_categorical_crossentropy
   metrics : ["accuracy"]
+  validation_split : 0.2
+  seed : 42
+  batch_size : 32
+  buffer_size : 32
+  EPOCHS : 1
+
 
 model :
   model_dir: Artifacts
+  init_model : init_model.h5 
+  trained_model : trained_model.h5
