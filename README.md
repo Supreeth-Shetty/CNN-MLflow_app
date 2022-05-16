@@ -1,7 +1,4 @@
-# MLflow-project-template
-MLflow project template
-
-## STEPS -
+# MLflow-project
 
 ### STEP 01- Create a repository by using template repository
 
